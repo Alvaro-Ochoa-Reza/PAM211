@@ -4,17 +4,13 @@ const personas = [
   { nombre: "María", edad: 28 }
 ];
 
-let personaLuis = personas.find(function(p) {
-  return p.nombre === "Luis";
-});
+let personaLuis = personas.find(p => p.nombre === "Luis");
 console.log("Encontrado:", personaLuis);
 
-personas.forEach(function(p) {
+personas.forEach(p => {
   console.log(p.nombre + " tiene " + p.edad + " años");
 });
 
-let totalEdades = personas.reduce(function(suma, p) {
-  return suma + p.edad;
-}, 0);
+let totalEdades = personas.reduce((suma, p) => suma + p.edad, 0);
 
 console.log("La suma de todas las edades es:", totalEdades);
