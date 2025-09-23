@@ -5,12 +5,8 @@ const productos = [
   { nombre: "Monitor", precio: 3000 }
 ];
 
-let filtrados = productos.filter(function(p) {
-  return p.precio > 1000;
-});
+let filtrados = productos.filter(p => p.precio > 1000);
 
-let nombres = filtrados.map(function(p) {
-  return p.nombre;
-});
+let nombres = filtrados.map(p => p.nombre);
 
 console.log(nombres);
