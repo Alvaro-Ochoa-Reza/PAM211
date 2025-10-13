@@ -16,9 +16,9 @@ export default function ContadorScreen() {
       <Text style={styles.texto2} > {contador} </Text>
 
       <View style={styles.botonesContainer}>
-        <Buttom color='red' title='Agregar' onPress={()=>setContador(contador+1)} />
-        <Buttom color='green' title='Quitar' onPress={()=>setContador(contador-1)} />
-        <Buttom color='yellow'title='Reiniciar' onPress={()=>setContador(0)} />
+        <Buttom color='#394956ff' title='Agregar' onPress={()=>setContador(contador+1)} />
+        <Buttom color='#394956ff' title='Quitar' onPress={()=>setContador(contador-1)} />
+        <Buttom color='#394956ff'title='Reiniciar' onPress={()=>setContador(0)} />
       </View> 
 
       <StatusBar style="auto" />
@@ -33,7 +33,7 @@ export default function ContadorScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#8ad36dff',
+    backgroundColor: '#4e50cfff',
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
   },
 
    texto2:{
-    color:'#d31818ff',
+    color:'#ffffffff',
     fontSize:40,
     fontFamily:'Courier',
     fontWeight: '300',
@@ -55,8 +55,10 @@ const styles = StyleSheet.create({
     textDecorationLine: 'underLine',
   },
   botonesContainer:{
-    marginTop:20,
+    marginTop:15,
     flexDirection:'row',
-    gap:20,
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap:10,
   },
 });
