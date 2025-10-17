@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "my-appIntro",
-    "slug": "my-appIntro",
+    "name": "iintro",
+    "slug": "iintro",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
