@@ -1,7 +1,13 @@
-import { Text, StyleSheet, View, Buttom } from 'react-native'
+import { Text, StyleSheet, View, Button } from 'react-native'
 import React, { useState} from 'react'
 import BotonesScreen from './BotonesScreen';
 import ContadorScreen from './ContadorScreen';
+import TextInputScreen from './TextInputScreen';
+import ImageBackgroundScreen from './ImageBackgroungScreen';
+import ScrollViewScreen from './ScrollViewScreen';
+import ActivityIndicatorScreen from './ActivityIndicatorScreen';
+import FlatListScreen from './FlatListScreen';
+import ModalScreen from './ModalScreen';
 
 
 export default function MenuScreen() {
@@ -10,18 +16,50 @@ export default function MenuScreen() {
     switch(screen){
         case'contador':
             return <ContadorScreen/>;
-        case'botones':
+        case'botones y switch':
             return <BotonesScreen/>;
+        case'text input y alert':
+            return <TextInputScreen/>
+        case'image background y splashscreen':
+            return <ImageBackgroundScreen/>
+        case'scrollview':
+            return <ScrollViewScreen/>;
+        case'activity indicator':
+            return <ActivityIndicatorScreen/>;
+        case'flat list':
+            return <FlatListScreen/>
+        case'modal':
+            return <ModalScreen/>
         case'menu':
             default:
             return (
-                <View>
-                    <Text> Menu de Practicas </Text>
-                    <Buttom onPress={()=>setScreen('contador')} title='Pract:contador'></Buttom>
-                    <Buttom onPress={()=>setScreen('botones')} title='Pract:botones'></Buttom>
+                <View style={styles.container}>
+                    <Text style={styles.title}> Menu de Practicas </Text>
+                    <Button onPress={()=>setScreen('contador')} title='Pract: contador'></Button>
+                    <Button onPress={()=>setScreen('botones y switch')} title='Pract: botones y switch'></Button>
+                    <Button onPress={()=>setScreen('text input y alert')} title='Pract: text input y alert'></Button>
+                    <Button onPress={()=>setScreen('image background y splashscreen')} title='Pract: image background y splashscreen'></Button>
+                    <Button onPress={()=>setScreen('activity indicator')} title='Pract: activityindicator'></Button>
+                    <Button onPress={()=>setScreen('scrollview')} title='Pract: scrollview'></Button>
+                    <Button onPress={()=>setScreen('flat list')} title='Pract: flat list y section list'></Button>
+                    <Button onPress={()=>setScreen('modal')} title='Pract: modal'></Button>
                 </View>
         ) 
     }
 
 }
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        padding: 20,
+        gap: 20,
+    },
+    title:{
+        fontSize: 24,
+        fontWeight: 'bold',
+        marginBottom: 20,
+    },
+})
+    
