@@ -9,7 +9,7 @@ export default function ImageBackgroundScreen({ navigation }) {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowSplash(false);
-    }, 10000);
+    }, 3000);
     return () => clearTimeout(timer);
   }, []);
 
@@ -39,7 +39,7 @@ export default function ImageBackgroundScreen({ navigation }) {
     </ImageBackground>
   );
 }  
-
+  
 const {width, heigth} = Dimensions.get('window');
 
 const styles = StyleSheet.create({

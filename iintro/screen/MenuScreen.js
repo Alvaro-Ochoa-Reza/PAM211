@@ -3,15 +3,15 @@ import React, { useState} from 'react'
 import BotonesScreen from './BotonesScreen';
 import ContadorScreen from './ContadorScreen';
 import TextInputScreen from './TextInputScreen';
-import ImageBackgroundScreen from './ImageBackgroungScreen';
+import ImageBackgroundScreen from './ImageBackgroundScreen';
 import ScrollViewScreen from './ScrollViewScreen';
 import ActivityIndicatorScreen from './ActivityIndicatorScreen';
 import FlatListScreen from './FlatListScreen';
 import ModalScreen from './ModalScreen';
-
+import RepasoScreen from './RepasoScreen';
 
 export default function MenuScreen() {
-    const [screen,setScreen]= useState('menu');
+    const [screen, setScreen]= useState('menu');
 
     switch(screen){
         case'contador':
@@ -30,6 +30,8 @@ export default function MenuScreen() {
             return <FlatListScreen/>
         case'modal':
             return <ModalScreen/>
+        case 'repaso':
+            return <RepasoScreen/>;
         case'menu':
             default:
             return (
@@ -43,6 +45,8 @@ export default function MenuScreen() {
                     <Button onPress={()=>setScreen('scrollview')} title='Pract: scrollview'></Button>
                     <Button onPress={()=>setScreen('flat list')} title='Pract: flat list y section list'></Button>
                     <Button onPress={()=>setScreen('modal')} title='Pract: modal'></Button>
+                    <Button onPress={() => setScreen('repaso')} title= 'Pract: repaso' />
+
                 </View>
         ) 
     }
