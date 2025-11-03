@@ -9,6 +9,8 @@ import ActivityIndicatorScreen from './ActivityIndicatorScreen';
 import FlatListScreen from './FlatListScreen';
 import ModalScreen from './ModalScreen';
 import RepasoScreen from './RepasoScreen';
+import PerfilScreen from './PerfilScreen';
+import PrincipalScreen from './PrincipalScreen';
 
 export default function MenuScreen() {
     const [screen, setScreen]= useState('menu');
@@ -30,8 +32,12 @@ export default function MenuScreen() {
             return <FlatListScreen/>
         case'modal':
             return <ModalScreen/>
-        case 'repaso':
+        case'repaso':
             return <RepasoScreen/>;
+        case'perfil':
+            return <PerfilScreen/>
+        case'principal':
+            return <PrincipalScreen/>;
         case'menu':
             default:
             return (
@@ -46,6 +52,8 @@ export default function MenuScreen() {
                     <Button onPress={()=>setScreen('flat list')} title='Pract: flat list y section list'></Button>
                     <Button onPress={()=>setScreen('modal')} title='Pract: modal'></Button>
                     <Button onPress={() => setScreen('repaso')} title= 'Pract: repaso' />
+                        <Button onPress={() => setScreen('perfil')} title= 'Perf' />
+                            <Button onPress={() => setScreen('principal')} title= 'Princ' />
 
                 </View>
         ) 
