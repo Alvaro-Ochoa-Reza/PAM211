@@ -114,7 +114,6 @@ export default function App() {
       >
         <View style={styles.overlay}>
           <Text style={styles.title}> </Text>
-          <Button onPress={() => nosequeponer() title="hamstér a la plancha con salsa de flores"}></Button>
           <Text style={styles.textoprincipal}> Restaurante </Text>
         </View>
       </ImageBackground>
