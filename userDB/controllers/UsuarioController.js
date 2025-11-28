@@ -44,6 +44,27 @@ export class UsuarioController {
         }
     }
 
+    async actualizarUsuario(id, nombre) {
+        try {
+            Usuario.validar(nombre);
+            await DatabaseService.update(id, nombre.trim());
+            this.notifyListeners();
+        } catch (error) {
+            console.error('Error al actualizar usuario:', error);
+            throw error;
+        }
+    }
+
+     async eliminarUsuario(id) {
+        try {
+            await DatabaseService.remove(id);
+            this.notifyListeners();
+        } catch (error) {
+            console.error('Error al eliminar usuario:', error);
+            throw error;
+        }
+    }
+
     // Sistema de observaciones para actualizar la vista automáticamente
     addListener(callback) {
         this.listeners.push(callback);
